@@ -1,0 +1,110 @@
+.suggestion{
+    height: 352.59px;
+    position: relative;
+
+    .suggestion-card{
+        display: flex;
+        height: 100%;
+        background-color: white;
+        position: relative;
+        width: fit-content;
+    
+        .left-card{
+            display: flex;
+            flex-direction: column;
+            background-image: url('../../assets/cardImage1.jpg');
+            background-position: 0px bottom;
+            background-repeat: no-repeat;
+            width: 230px;
+            padding-top: 72px;
+            z-index: 1;
+            background-color: white;
+            position: relative;
+    
+            h2{
+                font-weight: 400;
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            button{
+                width: fit-content;
+                align-self: center;
+                background-color: #2874F0;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-weight: 600;
+                margin-top: 43px;
+                border-radius: 2px;
+                box-shadow: 1px 1px 3px -1px black;
+            }
+
+            .left-arrow{
+                left: 230px;
+                top: 129px;
+                box-shadow: 4px 2px 10px -7px black
+            }
+        }
+
+        .product-slider{
+            width: calc(100% - 230px);
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+            align-items: center;
+
+            .product-card{
+                padding: 25px 15px;
+                width: 232px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+
+                .from-price{
+                    color: #388E68;
+                }
+
+                .sub-heading{
+                    font-size: 14px;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    .right-arrow{       
+        top: 113px;
+        box-shadow: -3px 1px 10px -7px black;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .suggestion{
+        height: fit-content;
+
+        .suggestion-card{
+            flex-direction: column;
+
+            .left-card{
+                width: 100vw;
+                background-size: 100%;
+
+                .left-arrow{
+                    left: 0;
+                    top: 282px;
+                }
+            }
+        }
+
+        .right-arrow{
+            z-index: 100;
+            top: 280px;
+        }
+    }
+
+    .arrow{
+        padding-block: 20px;
+        padding-inline: 0;
+    }
+}

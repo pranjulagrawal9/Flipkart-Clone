@@ -1,0 +1,22 @@
+.arrow{
+    position: absolute;
+    background-color: white;
+    padding-block: 30px;
+    padding-inline: 6px;
+
+    svg{
+        font-size: 35px;
+    }
+}
+
+.left-arrow{
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.right-arrow{
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

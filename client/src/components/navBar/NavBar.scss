@@ -1,0 +1,211 @@
+.navbar{
+    background-color: #2874F0;
+    color: white;
+    height: 56px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+        padding-inline: 10px;
+
+        .flipkart-logo{
+            width: 100px;
+            display: flex;
+            padding: 13px 0;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .my-account, .seller, .more{
+            margin-right: 20px;
+            font-weight: 500;
+            letter-spacing: 0.1px;
+            position: relative;
+            cursor: pointer;
+
+            .name{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .drop-down{
+                transition: all 0.2s;
+                font-size: 20px;
+            }
+
+            &:hover .drop-down{
+                transform: rotate(180deg);
+            }
+        }
+
+        .menu-box{
+            position: absolute;
+            width: 250px;
+            top: 56px;
+            color: black;
+            box-shadow: 0px 5px 20px 1px rgb(0 0 0 / 21%);
+            animation: menuopen 0.4s;
+            z-index: 999;
+            background-color: white;
+
+            ul{
+                list-style: none;
+
+                .menu-item{
+                    display: flex;
+                    gap: 10px;
+                    padding: 20px 10px;
+                    border-bottom: 1px solid #eaeaea;
+
+                    &:hover{
+                        background-color: rgb(248, 248, 248);
+                    }
+
+                    svg{
+                        fill: #2874F0;
+                        font-size: 18px;
+                    }
+
+                    span{
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .menu-box::before{
+            content: '';
+            border-width: 10px;
+            border-color: transparent transparent white transparent;
+            border-style: solid;
+            position: absolute;
+            left: 50%;
+            margin-left: -10px;
+            top: -20px;
+        }
+
+        .my-account{
+            margin-left: 20px;
+            display: flex;
+            align-self: normal;
+            padding: 13px 0;
+
+            .menu-box{
+                transform: translate(-89.5705px);
+            }
+        }
+
+        .more{
+            display: flex;
+            align-self: normal;
+            padding: 13px 0;
+
+            .menu-box{
+                transform: translate(-96.20700px);
+            }
+        }
+
+        .cart-container{
+            display: flex;
+            gap: 10px;
+
+            span{
+                font-weight: 500;
+                letter-spacing: 0.1px;
+            }
+        }
+    }
+}
+
+.search-box{
+    height: 35px;
+    display: flex;
+    width: 416px;
+
+    input{
+        width: 90%;
+        height: 100%;
+        padding-inline: 15px;
+        border: none;
+        outline: none;
+        border-radius: 2px 0px 0px 2px;
+    }
+
+    .search-btn{
+        width: 10%;
+        height: 100%;
+        border: none;
+        background: none;
+        background-color: white;
+        border-radius: 0px 2px 2px 0px;
+
+        svg{
+            color: #2874F0;
+            stroke-width: 1px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+@keyframes menuopen {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        .container{
+            justify-content: space-around;
+
+            .my-account, .seller, .more{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .navbar{
+        .container{
+            justify-content: space-between;
+
+            .search-box{
+                display: none;
+            }
+        }
+    }
+
+    .bottom-search{
+        background-color: #2874F0;
+        color: white;
+        height: 45px;
+        position: fixed;
+        top: 56px;
+        width: 100vw;
+        z-index: 999;
+
+        .search-box{
+            height: 39px;
+            width: 96%;
+            margin-inline: auto;
+        }
+
+    }
+}
